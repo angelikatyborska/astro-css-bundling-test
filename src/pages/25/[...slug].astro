@@ -1,0 +1,76 @@
+---
+import Component1 from "../../components/Component1/Component.astro";
+import Component2 from "../../components/Component2/Component.astro";
+import Component3 from "../../components/Component3/Component.astro";
+import Component4 from "../../components/Component4/Component.astro";
+import Component5 from "../../components/Component5/Component.astro";
+import Component6 from "../../components/Component6/Component.astro";
+import Component7 from "../../components/Component7/Component.astro";
+import Component8 from "../../components/Component8/Component.astro";
+import Component9 from "../../components/Component9/Component.astro";
+import Component10 from "../../components/Component10/Component.astro";
+import Component11 from "../../components/Component11/Component.astro";
+import Component12 from "../../components/Component12/Component.astro";
+import Component13 from "../../components/Component13/Component.astro";
+import Component14 from "../../components/Component14/Component.astro";
+import Component15 from "../../components/Component15/Component.astro";
+import Component16 from "../../components/Component16/Component.astro";
+import Component17 from "../../components/Component17/Component.astro";
+import Component18 from "../../components/Component18/Component.astro";
+import Component19 from "../../components/Component19/Component.astro";
+import Component20 from "../../components/Component20/Component.astro";
+import Component21 from "../../components/Component21/Component.astro";
+import Component22 from "../../components/Component22/Component.astro";
+import Component23 from "../../components/Component23/Component.astro";
+import Component24 from "../../components/Component24/Component.astro";
+import Component25 from "../../components/Component25/Component.astro";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return Array.from({ length: 1000 }, (_, i) => ({ params: { slug: String(i + 1) } }));
+}
+
+const components = [
+  Component1,
+  Component2,
+  Component3,
+  Component4,
+  Component5,
+  Component6,
+  Component7,
+  Component8,
+  Component9,
+  Component10,
+  Component11,
+  Component12,
+  Component13,
+  Component14,
+  Component15,
+  Component16,
+  Component17,
+  Component18,
+  Component19,
+  Component20,
+  Component21,
+  Component22,
+  Component23,
+  Component24,
+  Component25,
+];
+
+// slug % 25 picks the first component (0 maps to Component25); the next two wrap from 25 back to 1
+const start = Number(Astro.params.slug) % 25 || 25;
+const selected = [0, 1, 2].map((offset) => components[(start - 1 + offset) % 25]);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Page {Astro.params.slug}</title>
+  </head>
+  <body>
+    {selected.map((Component) => <Component />)}
+  </body>
+</html>

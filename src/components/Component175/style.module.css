@@ -1,3 +1,4 @@
+.component:before { content: 'Component 175'; }
 .component {
   font-size: 29px;
   background-color: hsl(303 44% 81%);
