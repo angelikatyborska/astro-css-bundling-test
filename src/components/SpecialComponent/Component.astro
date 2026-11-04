@@ -1,5 +1,492 @@
----
-import styles from './style.module.css';
----
+<div class="component">SPECIAL COMPONENT</div>
 
-<div class={styles.component}>SPECIAL COMPONENT</div>
+<style>
+.component:before { content: 'Special Component'; }
+.component {
+  font-size: 32px;
+  background-color: hsl(45 51% 93%);
+  height: 103px;
+  padding: 36px;
+}
+.component :global(p) {
+  color: inherit;
+}
+
+.component :global(strong) {
+  font-weight: bold;
+  color: inherit;
+}
+.component :global(h1) {
+  margin-block: 8px;
+  margin-inline: auto;
+  font-size: inherit;
+}
+
+.component :global(h2) {
+  font-size: inherit;
+  color: inherit;
+  padding-inline: 0;
+  padding-block: 0;
+  margin-inline: 0;
+  margin-block: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  top: auto;
+  bottom: auto;
+  right: auto;
+  left: auto;
+}
+.component :global(h3) {
+  font-size: inherit;
+  color: inherit;
+  padding-inline: 0;
+  padding-block: 0;
+  margin-inline: 0;
+  margin-block: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  top: auto;
+  bottom: auto;
+  right: auto;
+  left: auto;
+}
+.component :global(h4) {
+  font-size: inherit;
+  color: inherit;
+  padding-inline: 0;
+  padding-block: 0;
+  margin-inline: 0;
+  margin-block: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  top: auto;
+  bottom: auto;
+  right: auto;
+  left: auto;
+}
+.component :global(h5) {
+  font-size: inherit;
+  color: inherit;
+  padding-inline: 0;
+  padding-block: 0;
+  margin-inline: 0;
+  margin-block: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  top: auto;
+  bottom: auto;
+  right: auto;
+  left: auto;
+}
+.component :global(h6) {
+  font-size: inherit;
+  color: inherit;
+  padding-inline: 0;
+  padding-block: 0;
+  margin-inline: 0;
+  margin-block: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  top: auto;
+  bottom: auto;
+  right: auto;
+  left: auto;
+}
+
+/* Browser default styles (based on the HTML spec's UA stylesheet), scoped to .component */
+.component :global(address),
+.component :global(blockquote),
+.component :global(center),
+.component :global(dialog),
+.component :global(div),
+.component :global(figure),
+.component :global(figcaption),
+.component :global(footer),
+.component :global(form),
+.component :global(header),
+.component :global(hr),
+.component :global(legend),
+.component :global(listing),
+.component :global(main),
+.component :global(p),
+.component :global(plaintext),
+.component :global(pre),
+.component :global(search),
+.component :global(xmp) {
+  display: block;
+}
+.component :global(article),
+.component :global(aside),
+.component :global(h1),
+.component :global(h2),
+.component :global(h3),
+.component :global(h4),
+.component :global(h5),
+.component :global(h6),
+.component :global(hgroup),
+.component :global(nav),
+.component :global(section) {
+  display: block;
+}
+.component :global(blockquote),
+.component :global(figure),
+.component :global(listing),
+.component :global(p),
+.component :global(plaintext),
+.component :global(pre),
+.component :global(xmp) {
+  margin-block: 1em;
+}
+.component :global(blockquote),
+.component :global(figure) {
+  margin-inline: 40px;
+}
+.component :global(address) {
+  font-style: italic;
+}
+.component :global(listing),
+.component :global(plaintext),
+.component :global(pre),
+.component :global(xmp) {
+  font-family: monospace;
+  white-space: pre;
+}
+.component :global(dialog:not([open])) {
+  display: none;
+}
+.component :global(dialog) {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  border: solid;
+  padding: 1em;
+  background-color: Canvas;
+  color: CanvasText;
+}
+.component :global(dialog:modal) {
+  position: fixed;
+  overflow: auto;
+  inset-block: 0;
+  max-width: calc(100% - 6px - 2em);
+  max-height: calc(100% - 6px - 2em);
+}
+.component :global(dialog::backdrop) {
+  background: rgba(0, 0, 0, 0.1);
+}
+.component :global(slot) {
+  display: contents;
+}
+.component :global(pre[wrap]) {
+  white-space: pre-wrap;
+}
+.component :global(form) {
+  margin-block-end: 1em;
+}
+.component :global(cite),
+.component :global(dfn),
+.component :global(em),
+.component :global(i),
+.component :global(var) {
+  font-style: italic;
+}
+.component :global(b),
+.component :global(strong) {
+  font-weight: bolder;
+}
+.component :global(code),
+.component :global(kbd),
+.component :global(samp),
+.component :global(tt) {
+  font-family: monospace;
+}
+.component :global(big) {
+  font-size: larger;
+}
+.component :global(small) {
+  font-size: smaller;
+}
+.component :global(sub) {
+  vertical-align: sub;
+}
+.component :global(sup) {
+  vertical-align: super;
+}
+.component :global(sub),
+.component :global(sup) {
+  line-height: normal;
+  font-size: smaller;
+}
+.component :global(ruby) {
+  display: ruby;
+}
+.component :global(rt) {
+  display: ruby-text;
+}
+.component :global(:link) {
+  color: #0000ee;
+}
+.component :global(:visited) {
+  color: #551a8b;
+}
+.component :global(:link:active),
+.component :global(:visited:active) {
+  color: #ff0000;
+}
+.component :global(:link),
+.component :global(:visited) {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.component :global(:focus-visible) {
+  outline: auto;
+}
+.component :global(mark) {
+  background: yellow;
+  color: black;
+}
+.component :global(abbr[title]),
+.component :global(acronym[title]) {
+  text-decoration: dotted underline;
+}
+.component :global(ins),
+.component :global(u) {
+  text-decoration: underline;
+}
+.component :global(del),
+.component :global(s),
+.component :global(strike) {
+  text-decoration: line-through;
+}
+.component :global(q::before) {
+  content: open-quote;
+}
+.component :global(q::after) {
+  content: close-quote;
+}
+.component :global(br) {
+  display-outside: newline;
+}
+.component :global(nobr) {
+  white-space: nowrap;
+}
+.component :global(wbr) {
+  display-outside: break-opportunity;
+}
+.component :global(nobr wbr) {
+  white-space: normal;
+}
+.component :global(dir),
+.component :global(dd),
+.component :global(dl),
+.component :global(dt),
+.component :global(menu),
+.component :global(ol),
+.component :global(ul) {
+  display: block;
+}
+.component :global(li) {
+  display: list-item;
+  text-align: match-parent;
+}
+.component :global(dir),
+.component :global(dl),
+.component :global(menu),
+.component :global(ol),
+.component :global(ul) {
+  margin-block: 1em;
+}
+.component :global(:is(dir, dl, menu, ol, ul) :is(dir, dl, menu, ol, ul)) {
+  margin-block: 0;
+}
+.component :global(dd) {
+  margin-inline-start: 40px;
+}
+.component :global(dir),
+.component :global(menu),
+.component :global(ol),
+.component :global(ul) {
+  padding-inline-start: 40px;
+}
+.component :global(ol),
+.component :global(ul),
+.component :global(menu) {
+  counter-reset: list-item;
+}
+.component :global(ol) {
+  list-style-type: decimal;
+}
+.component :global(dir),
+.component :global(menu),
+.component :global(ul) {
+  list-style-type: disc;
+}
+.component :global(:is(dir, menu, ol, ul) :is(dir, menu, ul)) {
+  list-style-type: circle;
+}
+.component :global(:is(dir, menu, ol, ul) :is(dir, menu, ol, ul) :is(dir, menu, ul)) {
+  list-style-type: square;
+}
+.component :global(table) {
+  display: table;
+  box-sizing: border-box;
+  border-spacing: 2px;
+  border-collapse: separate;
+  text-indent: initial;
+}
+.component :global(caption) {
+  display: table-caption;
+  text-align: center;
+}
+.component :global(colgroup) {
+  display: table-column-group;
+}
+.component :global(col) {
+  display: table-column;
+}
+.component :global(thead) {
+  display: table-header-group;
+}
+.component :global(tbody) {
+  display: table-row-group;
+}
+.component :global(tfoot) {
+  display: table-footer-group;
+}
+.component :global(tr) {
+  display: table-row;
+}
+.component :global(td),
+.component :global(th) {
+  display: table-cell;
+  padding: 1px;
+}
+.component :global(th) {
+  font-weight: bold;
+}
+.component :global(:is(table, thead, tbody, tfoot, tr) > th) {
+  text-align: -internal-th-center;
+}
+.component :global(thead),
+.component :global(tbody),
+.component :global(tfoot),
+.component :global(table > tr) {
+  vertical-align: middle;
+}
+.component :global(tr),
+.component :global(td),
+.component :global(th) {
+  vertical-align: inherit;
+}
+.component :global(table),
+.component :global(td),
+.component :global(th) {
+  border-color: gray;
+}
+.component :global(thead),
+.component :global(tbody),
+.component :global(tfoot),
+.component :global(tr) {
+  border-color: inherit;
+}
+.component :global(input),
+.component :global(select),
+.component :global(button),
+.component :global(textarea) {
+  letter-spacing: initial;
+  word-spacing: initial;
+  line-height: initial;
+  text-transform: initial;
+  text-indent: initial;
+  text-shadow: initial;
+  appearance: auto;
+}
+.component :global(input),
+.component :global(select),
+.component :global(textarea) {
+  text-align: initial;
+}
+.component :global(input:is([type="reset"], [type="button"], [type="submit"])),
+.component :global(button) {
+  text-align: center;
+}
+.component :global(input),
+.component :global(button) {
+  display: inline-block;
+}
+.component :global(input[type="hidden"]),
+.component :global(input[type="file"]),
+.component :global(input[type="image"]) {
+  appearance: none;
+}
+.component :global(input:is([type="radio"], [type="checkbox"], [type="reset"], [type="button"], [type="submit"], [type="color"], [type="search"])),
+.component :global(select),
+.component :global(button) {
+  box-sizing: border-box;
+}
+.component :global(textarea) {
+  white-space: pre-wrap;
+}
+.component :global(fieldset) {
+  display: block;
+  margin-inline: 2px;
+  border: groove 2px ThreeDFace;
+  padding-block: 0.35em 0.625em;
+  padding-inline: 0.75em;
+  min-inline-size: min-content;
+}
+.component :global(legend) {
+  padding-inline: 2px;
+}
+.component :global(hr) {
+  color: gray;
+  border-style: inset;
+  border-width: 1px;
+  margin-block: 0.5em;
+  margin-inline: auto;
+  overflow: hidden;
+}
+.component :global(details),
+.component :global(summary) {
+  display: block;
+}
+.component :global(details > summary:first-of-type) {
+  display: list-item;
+  counter-increment: list-item 0;
+  list-style: disclosure-closed inside;
+}
+.component :global(details[open] > summary:first-of-type) {
+  list-style-type: disclosure-open;
+}
+.component :global(iframe) {
+  border: 2px inset;
+}
+.component :global(video) {
+  object-fit: contain;
+}
+.component :global(img),
+.component :global(video),
+.component :global(canvas),
+.component :global(svg) {
+  overflow: clip;
+  overflow-clip-margin: content-box;
+}
+.component :global(meter) {
+  appearance: auto;
+}
+.component :global(progress) {
+  appearance: auto;
+}
+.component :global(marquee) {
+  display: inline-block;
+  text-align: initial;
+  overflow: hidden !important;
+}
+</style>
